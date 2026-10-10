@@ -1,0 +1,182 @@
+/* Responsive and Mobile-First Optimizations */
+@import './variables.css';
+
+/* 1. Universal Anti-Overflow & Zoom-Out Fixes */
+html, body, #root {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+/* Ensure no flex or grid container allows children to push beyond 100% viewport */
+.row, .grid, .flex, [class*="grid-"], [class*="flex-"] {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Images and Media never overflow */
+img, picture, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* 2. Grid Utilities */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* 3. Breakpoint: 640px (Small Tablets & Large Phones) */
+@media (min-width: 640px) {
+  .grid-2-sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 4. Breakpoint: 768px (Tablets) */
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 5. Breakpoint: 1024px (Desktops) */
+@media (min-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 6. Mobile Safe Areas and Touch Controls */
+@supports (padding: max(0px)) {
+  .floating-action-stack {
+    bottom: max(1.25rem, env(safe-area-inset-bottom, 1.25rem));
+    right: max(1.25rem, env(safe-area-inset-right, 1.25rem));
+  }
+}
+
+/* 7. Small Viewports (<= 430px) */
+@media (max-width: 430px) {
+  .btn {
+    padding: 0.65rem 1.15rem;
+    font-size: 0.9rem;
+    min-height: 44px;
+  }
+  
+  .container, .container-narrow {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card {
+    padding: 1.15rem;
+  }
+}
+
+/* 8. Very Small Viewports (<= 360px) */
+@media (max-width: 360px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.45rem;
+  }
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* 9. Hero Section - Pure Full-Width Background with Text On Top (Zero Color Overlays) */
+.hero-section {
+  width: 100%;
+  background-image: url('/images/herosection-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+@media (max-width: 991px) {
+  .hero-section {
+    background-position: 28% center !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero-section {
+    background-position: 22% center !important;
+    min-height: 580px !important;
+  }
+}
+
+/* 10. Doctor Section Desktop Responsive Optimization (Eliminates Empty Space) */
+.doctor-master-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--warm-white);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(0, 163, 215, 0.22);
+  box-shadow: 0 20px 48px -12px rgba(11, 37, 69, 0.12), 0 8px 24px -6px rgba(255, 94, 20, 0.08);
+  overflow: hidden;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .doctor-master-card {
+    grid-template-columns: 410px 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .doctor-master-card {
+    grid-template-columns: 440px 1fr;
+  }
+}
+
+.doctor-visual-col {
+  background: linear-gradient(180deg, #F0F9FF 0%, #FAF5FF 50%, #FFF7ED 100%);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  border-right: 1px solid var(--subtle-borders);
+  justify-content: flex-start;
+}
+
+@media (max-width: 991px) {
+  .doctor-visual-col {
+    border-right: none;
+    border-bottom: 1px solid var(--subtle-borders);
+  }
+}
+
+.doctor-content-col {
+  padding: clamp(1.5rem, 3.2vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  justifyContent: space-between;
+}
+
+

@@ -1,0 +1,86 @@
+/* Design System Tokens for Sahasraditya Physiotherapy */
+:root {
+  /* Brand Core Palette */
+  --primary-navy: #17324D;
+  --teal: #138A8A;
+  --warm-white: #FFFFFF;
+  --soft-ivory: #F7F9F7;
+  --charcoal-text: #24313D;
+  --muted-sage: #DDEBE4;
+  --warm-accent: #E7A65A;
+  --muted-secondary-text: #64748B;
+  --subtle-borders: #E5EAE8;
+
+  /* Derived & State Variants */
+  --teal-hover: #0f7373;
+  --teal-light: #e8f5f5;
+  --teal-dark: #0c5757;
+  --navy-dark: #0e2032;
+  --navy-light: #224365;
+  --navy-surface: #1e3c5a;
+  --sage-light: #f1f7f4;
+  --warm-accent-light: #fcf4eb;
+  --warm-accent-hover: #db933f;
+
+  /* Logo-Inspired Vibrant Palette (From Official Sahasraditya Emblem) */
+  --logo-navy: #0B2545;            /* Deep Royal Sapphire ("Sahasr") */
+  --logo-cyan: #00A3D7;            /* Electric Cerulean / Spine Healing Aqua */
+  --logo-cyan-light: #E0F2FE;      /* Soft Cyan Tint */
+  --logo-cyan-hover: #0284C7;
+  --logo-gold: #F59E0B;            /* Surya Aditya Golden Sun Rays ("aditya") */
+  --logo-gold-glow: #FBBF24;       /* Sunburst Gold Glow */
+  --logo-gold-light: #FEF3C7;      /* Solar Warmth Light Background */
+  --logo-orange: #FF5E14;          /* Radiant Sunset Flame ("A" inner fire) */
+  --logo-orange-hover: #EA580C;
+  --logo-orange-light: #FFF1EC;    /* Soft Coral Tangerine Tint */
+  --logo-red: #E11D48;             /* Vibrant Rose Accent */
+  
+  /* Brand Gradients from Logo Spectrum */
+  --gradient-aditya: linear-gradient(135deg, #FF5E14 0%, #F59E0B 100%);
+  --gradient-sahasra: linear-gradient(135deg, #0B2545 0%, #00A3D7 100%);
+  --gradient-healing: linear-gradient(135deg, #00A3D7 0%, #138A8A 100%);
+  --gradient-sunset: linear-gradient(135deg, #FF5E14 0%, #F43F5E 50%, #F59E0B 100%);
+  --gradient-spectrum: linear-gradient(90deg, #0B2545 0%, #00A3D7 33%, #FF5E14 66%, #F59E0B 100%);
+  --gradient-spectrum-subtle: linear-gradient(90deg, rgba(11, 37, 69, 0.15) 0%, rgba(0, 163, 215, 0.25) 33%, rgba(255, 94, 20, 0.25) 66%, rgba(245, 158, 11, 0.2) 100%);
+
+  
+  /* Typography Scale */
+  --font-heading: 'Plus Jakarta Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Spacing System */
+  --space-2xs: 0.25rem;  /* 4px */
+  --space-xs: 0.5rem;    /* 8px */
+  --space-sm: 0.75rem;   /* 12px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4.5rem;   /* 72px */
+  --space-4xl: 6rem;     /* 96px */
+
+  /* Layout Constraints */
+  --container-max-width: 1200px;
+  --container-narrow: 840px;
+  --nav-height: 76px;
+  --nav-height-mobile: 68px;
+
+  /* Elevation & Shadows */
+  --shadow-sm: 0 1px 3px rgba(23, 50, 77, 0.05);
+  --shadow-md: 0 4px 14px -2px rgba(23, 50, 77, 0.07), 0 2px 6px -1px rgba(23, 50, 77, 0.04);
+  --shadow-lg: 0 12px 28px -6px rgba(23, 50, 77, 0.09), 0 4px 12px -2px rgba(23, 50, 77, 0.04);
+  --shadow-xl: 0 20px 40px -10px rgba(23, 50, 77, 0.12);
+  --shadow-card-hover: 0 14px 32px -8px rgba(19, 138, 138, 0.12), 0 4px 14px -2px rgba(23, 50, 77, 0.05);
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}

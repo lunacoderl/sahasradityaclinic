@@ -1,0 +1,7 @@
+# robots.txt for Sahasraditya Physiotherapy & In Patient Rehabilitation Centre
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+Sitemap: https://sahasradityaphysio.in/sitemap.xml

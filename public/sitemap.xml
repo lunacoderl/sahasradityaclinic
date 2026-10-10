@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://sahasradityaphysio.in/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Orthopaedic & Musculoskeletal Services -->
+  <url>
+    <loc>https://sahasradityaphysio.in/services/orthopedic-physiotherapy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sahasradityaphysio.in/services/joint-mobilization</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sahasradityaphysio.in/services/spinal-biomechanical-assessment</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sahasradityaphysio.in/services/extremity-biomechanical-assessment</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Sports Rehabilitation -->
+  <url>
+    <loc>https://sahasradityaphysio.in/services/sports-injury-rehabilitation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sahasradityaphysio.in/services/therapeutic-taping</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Neurological Rehabilitation -->
+  <url>
+    <loc>https://sahasradityaphysio.in/services/neurological-rehabilitation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sahasradityaphysio.in/services/spinal-cord-injury-rehabilitation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sahasradityaphysio.in/services/neurodevelopmental-therapy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Manual Therapy -->
+  <url>
+    <loc>https://sahasradityaphysio.in/services/proprioceptive-neuromuscular-facilitation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sahasradityaphysio.in/services/myofascial-release</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sahasradityaphysio.in/services/muscle-energy-technique</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sahasradityaphysio.in/services/positional-release-technique</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Specialized Techniques -->
+  <url>
+    <loc>https://sahasradityaphysio.in/services/dry-needling</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sahasradityaphysio.in/services/cupping-therapy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sahasradityaphysio.in/services/transcranial-direct-current-stimulation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Legal & Compliance Pages -->
+  <url>
+    <loc>https://sahasradityaphysio.in/privacy-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://sahasradityaphysio.in/terms-and-conditions</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+</urlset>
