@@ -9,7 +9,7 @@ export const CLINIC_INFO = {
   // Lead Practitioner
   doctor: {
     name: "Dr. D. V. Balaji N",
-    title: "Physiotherapist & Rehabilitation Specialist",
+    title: "Physiotherapist & Rehabilitation Specialist ",
     image: "/images/doctor.jpg",
     experienceYears: "8+",
     education: [
