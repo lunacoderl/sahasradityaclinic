@@ -180,20 +180,16 @@ img, picture, video, canvas, svg {
 }
 
 /* =========================================================================
-   Top Highlight Banner (Location & Direct Mobile Contact)
+   Top Highlight Banner (Single-Line Space-Saving Bar)
 ========================================================================= */
 .top-highlight-banner {
   font-family: var(--font-body);
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.top-banner-pill-location {
-  transition: all var(--transition-fast);
-}
-
-.top-banner-pill-location:hover {
-  background-color: rgba(0, 163, 215, 0.28) !important;
-  border-color: rgba(0, 163, 215, 0.75) !important;
-  transform: translateY(-1px);
+.top-banner-location-link:hover {
+  color: #38BDF8 !important;
 }
 
 .top-banner-pill-phone {
@@ -201,8 +197,8 @@ img, picture, video, canvas, svg {
 }
 
 .top-banner-pill-phone:hover {
-  background-color: rgba(245, 158, 11, 0.3) !important;
-  border-color: rgba(245, 158, 11, 0.85) !important;
+  background-color: rgba(245, 158, 11, 0.35) !important;
+  border-color: rgba(245, 158, 11, 0.95) !important;
   transform: translateY(-1px);
 }
 
@@ -214,7 +210,7 @@ img, picture, video, canvas, svg {
   display: inline;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 991px) {
   .top-banner-hours {
     display: none !important;
   }
@@ -234,15 +230,15 @@ img, picture, video, canvas, svg {
 
 @media (max-width: 480px) {
   .top-highlight-banner {
-    padding: 0.35rem 0 !important;
+    height: 28px !important;
+    font-size: 0.68rem !important;
   }
-  .top-banner-pill-location {
-    font-size: 0.72rem !important;
-    padding: 0.2rem 0.45rem !important;
+  .top-banner-location-link {
+    font-size: 0.68rem !important;
   }
   .top-banner-pill-phone {
-    font-size: 0.72rem !important;
-    padding: 0.2rem 0.45rem !important;
+    font-size: 0.68rem !important;
+    padding: 0.1rem 0.4rem !important;
   }
 }
 

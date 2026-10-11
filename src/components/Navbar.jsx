@@ -88,38 +88,46 @@ export default function Navbar() {
       }}
     >
       {/* =========================================================================
-          TOP HIGHLIGHT BANNER: CLINIC LOCATION & DIRECT MOBILE CONTACT
+          TOP HIGHLIGHT BANNER: COMPACT SINGLE-LINE SPACE-SAVING HEADER
       ========================================================================= */}
       <div
         className="top-highlight-banner"
         style={{
           backgroundColor: '#071A30',
-          backgroundImage: 'linear-gradient(90deg, #071A30 0%, #0B2545 50%, #08213F 100%)',
+          backgroundImage: 'linear-gradient(90deg, #071A30 0%, #0B2545 50%, #071A30 100%)',
           borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
           color: '#FFFFFF',
-          fontSize: '0.8rem',
-          padding: '0.42rem 0',
+          fontSize: '0.74rem',
+          height: '32px',
+          display: 'flex',
+          alignItems: 'center',
           position: 'relative',
-          zIndex: 1001
+          zIndex: 1001,
+          overflow: 'hidden'
         }}
       >
-        <div className="container">
+        <div className="container" style={{ width: '100%' }}>
           <div
             style={{
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
-              flexWrap: 'wrap',
-              gap: '0.45rem 1rem'
+              flexWrap: 'nowrap',
+              gap: '0.75rem',
+              width: '100%',
+              minWidth: 0
             }}
           >
-            {/* Highlighted Location Block */}
+            {/* Left: Highlighted Location (Single Line, Space-Saving) */}
             <div
               style={{
-                display: 'flex',
+                display: 'inline-flex',
                 alignItems: 'center',
-                gap: '0.55rem',
-                flexWrap: 'wrap'
+                gap: '0.45rem',
+                minWidth: 0,
+                flexShrink: 1,
+                overflow: 'hidden',
+                whiteSpace: 'nowrap'
               }}
             >
               <a
@@ -130,19 +138,18 @@ export default function Navbar() {
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '0.45rem',
-                  backgroundColor: 'rgba(0, 163, 215, 0.16)',
-                  border: '1px solid rgba(0, 163, 215, 0.5)',
+                  gap: '0.35rem',
                   color: '#E0F2FE',
-                  padding: '0.22rem 0.65rem',
-                  borderRadius: 'var(--radius-full)',
+                  textDecoration: 'none',
                   fontWeight: 650,
-                  fontSize: '0.775rem',
-                  textDecoration: 'none'
+                  fontSize: '0.74rem',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap'
                 }}
-                className="top-banner-pill-location"
+                className="top-banner-location-link"
               >
-                <MapPin size={13} style={{ color: 'var(--logo-cyan)', flexShrink: 0 }} />
+                <MapPin size={12} style={{ color: 'var(--logo-cyan)', flexShrink: 0 }} />
                 <span className="desktop-address">
                   Ground Floor, Suvishesapuram, Opp. Central Jail Rd, Bhaskar Nagar, Rajamahendravaram
                 </span>
@@ -151,84 +158,89 @@ export default function Navbar() {
                 </span>
                 <span
                   style={{
-                    backgroundColor: 'var(--logo-cyan)',
-                    color: '#0B2545',
-                    fontSize: '0.65rem',
+                    backgroundColor: 'rgba(0, 163, 215, 0.22)',
+                    border: '1px solid rgba(0, 163, 215, 0.55)',
+                    color: '#38BDF8',
+                    fontSize: '0.62rem',
                     fontWeight: 800,
-                    padding: '0.1rem 0.4rem',
+                    padding: '0.05rem 0.35rem',
                     borderRadius: 'var(--radius-full)',
-                    marginLeft: '0.2rem',
-                    letterSpacing: '0.04em'
+                    flexShrink: 0,
+                    letterSpacing: '0.03em'
                   }}
                 >
-                  MAP
+                  MAP ↗
                 </span>
               </a>
 
-              {/* Consultation Hours Subtle Tag */}
+              {/* Consultation Hours (Desktop only) */}
               <div
                 className="top-banner-hours"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '0.35rem',
-                  color: 'rgba(255, 255, 255, 0.75)',
-                  fontSize: '0.725rem',
-                  fontWeight: 500
+                  gap: '0.3rem',
+                  color: 'rgba(255, 255, 255, 0.7)',
+                  fontSize: '0.7rem',
+                  fontWeight: 500,
+                  borderLeft: '1px solid rgba(255, 255, 255, 0.18)',
+                  paddingLeft: '0.5rem',
+                  flexShrink: 0
                 }}
               >
-                <Clock size={12} style={{ color: 'var(--logo-gold)' }} />
-                <span>Mon–Sat: 9 AM – 8:30 PM</span>
+                <Clock size={11} style={{ color: 'var(--logo-gold)' }} />
+                <span>9 AM – 8:30 PM</span>
               </div>
             </div>
 
-            {/* Highlighted Mobile Numbers & WhatsApp Block */}
+            {/* Right: Highlighted Mobile Numbers & WhatsApp (Strictly Single Line) */}
             <div
               style={{
-                display: 'flex',
+                display: 'inline-flex',
                 alignItems: 'center',
-                gap: '0.5rem',
-                flexWrap: 'wrap'
+                gap: '0.45rem',
+                flexShrink: 0,
+                whiteSpace: 'nowrap'
               }}
             >
-              {/* Primary Mobile Number (Highlighted with Gold Badge) */}
+              {/* Primary Mobile Number: 94927 73733 (Highlighted Gold Pill) */}
               <a
                 href={`tel:${CLINIC_INFO.contact.primaryPhoneRaw}`}
-                title="Call Dr. Balaji directly"
+                title="Call Primary Number: +91 94927 73733"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '0.4rem',
-                  backgroundColor: 'rgba(245, 158, 11, 0.2)',
-                  border: '1.5px solid rgba(245, 158, 11, 0.65)',
+                  gap: '0.35rem',
+                  backgroundColor: 'rgba(245, 158, 11, 0.22)',
+                  border: '1.5px solid rgba(245, 158, 11, 0.7)',
                   color: '#FEF3C7',
-                  padding: '0.22rem 0.7rem',
+                  padding: '0.12rem 0.55rem',
                   borderRadius: 'var(--radius-full)',
                   fontWeight: 800,
-                  fontSize: '0.775rem',
+                  fontSize: '0.74rem',
                   textDecoration: 'none',
-                  boxShadow: '0 1px 6px rgba(245, 158, 11, 0.22)'
+                  boxShadow: '0 1px 6px rgba(245, 158, 11, 0.2)'
                 }}
                 className="top-banner-pill-phone"
               >
-                <Phone size={13} style={{ color: '#FBBF24', flexShrink: 0 }} />
+                <Phone size={12} style={{ color: '#FBBF24', flexShrink: 0 }} />
                 <span>{CLINIC_INFO.contact.primaryPhone}</span>
               </a>
 
-              {/* Secondary Mobile Number */}
+              {/* Secondary Mobile Number: 99858 81892 (Hidden on Mobile) */}
               <a
                 href={`tel:${CLINIC_INFO.contact.secondaryPhoneRaw}`}
-                title="Call Clinic Reception"
+                title="Secondary Number: +91 99858 81892"
                 className="top-banner-phone-secondary"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '0.35rem',
+                  gap: '0.25rem',
                   color: 'rgba(255, 255, 255, 0.85)',
-                  fontSize: '0.75rem',
-                  fontWeight: 650,
+                  fontSize: '0.72rem',
+                  fontWeight: 600,
                   textDecoration: 'none',
-                  padding: '0.2rem 0.45rem',
+                  padding: '0.1rem 0.4rem',
                   backgroundColor: 'rgba(255, 255, 255, 0.08)',
                   borderRadius: 'var(--radius-full)',
                   border: '1px solid rgba(255, 255, 255, 0.15)'
@@ -237,27 +249,27 @@ export default function Navbar() {
                 <span>{CLINIC_INFO.contact.secondaryPhone}</span>
               </a>
 
-              {/* Instant WhatsApp Quick Link */}
+              {/* Direct WhatsApp Quick Link */}
               <a
                 href={getWhatsAppUrl("Hello Dr. Balaji, I would like to consult regarding physiotherapy treatment at Sahasraditya in Rajamahendravaram.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Chat with Clinic on WhatsApp"
+                title="Chat with Dr. Balaji on WhatsApp"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '0.35rem',
+                  gap: '0.3rem',
                   backgroundColor: '#25D366',
                   color: '#FFFFFF',
-                  padding: '0.22rem 0.65rem',
+                  padding: '0.12rem 0.5rem',
                   borderRadius: 'var(--radius-full)',
                   fontWeight: 750,
-                  fontSize: '0.725rem',
+                  fontSize: '0.7rem',
                   textDecoration: 'none',
-                  boxShadow: '0 2px 6px rgba(37, 211, 102, 0.25)'
+                  boxShadow: '0 1px 4px rgba(37, 211, 102, 0.3)'
                 }}
               >
-                <MessageCircle size={12} />
+                <MessageCircle size={11} />
                 <span>WhatsApp</span>
               </a>
             </div>

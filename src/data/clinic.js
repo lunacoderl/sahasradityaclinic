@@ -39,10 +39,10 @@ export const CLINIC_INFO = {
 
   // Contact Information
   contact: {
-    primaryPhone: "+91 99858 81892",
-    primaryPhoneRaw: "+919985881892",
-    secondaryPhone: "+91 94927 73733",
-    secondaryPhoneRaw: "+919492773733",
+    primaryPhone: "+91 94927 73733",
+    primaryPhoneRaw: "+919492773733",
+    secondaryPhone: "+91 99858 81892",
+    secondaryPhoneRaw: "+919985881892",
     email: "balajindv@gmail.com",
     address: {
       line1: "Ground Floor, Suvishesapuram",
@@ -88,5 +88,5 @@ Could you please share available appointment slots?
 Thank you.`;
 
   const message = customMessage || defaultMessage;
-  return `https://wa.me/919985881892?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/919492773733?text=${encodeURIComponent(message)}`;
 };

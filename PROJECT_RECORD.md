@@ -400,3 +400,41 @@
   - `dist/assets/index-Do0VLSgM.css` (11.74 kB)
   - `dist/assets/index-C8ksrxk0.js` (478.81 kB)
   - Build Time: 4.81s.
+
+---
+
+### Record Log: Phase 11 - Single-Line Space-Saving Top Banner & Primary Phone Configuration (+91 94927 73733)
+
+#### 1. Scope of User Changes
+- **Primary Phone Number:** Designate `+91 94927 73733` as the primary contact number across the clinic platform, with `+91 99858 81892` as secondary.
+- **Top Banner Architecture:** Redesign the top banner into a compact, single-line horizontal bar (`white-space: nowrap`, `height: 32px`, `flex-wrap: nowrap`) to conserve vertical screen space while keeping the location and primary contact prominent.
+
+#### 2. Files Modified & Exact Implementation Details
+- **`src/data/clinic.js`:**
+  - Updated `CLINIC_INFO.contact.primaryPhone`: `"+91 94927 73733"`.
+  - Updated `CLINIC_INFO.contact.primaryPhoneRaw`: `"+919492773733"`.
+  - Updated `CLINIC_INFO.contact.secondaryPhone`: `"+91 99858 81892"`.
+  - Updated `CLINIC_INFO.contact.secondaryPhoneRaw`: `"+919985881892"`.
+  - Updated `getWhatsAppUrl`: default direct endpoint set to `https://wa.me/919492773733`.
+
+- **`src/components/Navbar.jsx`:**
+  - Styled `.top-highlight-banner` with `height: 32px`, `display: flex`, `align-items: center`, `flex-wrap: nowrap`, `overflow: hidden`, strictly preventing any multi-line wrapping.
+  - Left Section: Highlighted clinic location with clickable Google Maps link (`MAP ↗`), responsive desktop address vs compact mobile address, and subtle vertical divider for working hours (`9 AM – 8:30 PM`).
+  - Right Section: Highlighted primary call pill for `+91 94927 73733` with gold badge styling, secondary call link for `+91 99858 81892`, and direct green WhatsApp button.
+
+- **`src/styles/responsive.css`:**
+  - Added strict single-line containment rules (`white-space: nowrap; overflow: hidden;`).
+  - Responsive breakpoints:
+    * Desktop (>= 992px): Displays full address, hours, primary phone, secondary phone, and WhatsApp button.
+    * Tablets (<= 768px): Hides secondary phone and hours to maintain a crisp single horizontal line.
+    * Small Mobile (<= 480px): Compact height (`28px`), compact pill padding, ensuring zero horizontal scroll or line-wrapping.
+
+#### 3. Verification & Build Testing
+- **Production Build:** `npm run build`
+- **Result:** SUCCESS (exit code 0, 0 errors, 0 warnings).
+- **Bundle Output:**
+  - `dist/index.html` (4.50 kB)
+  - `dist/assets/index-lp2bcIBO.css` (11.69 kB)
+  - `dist/assets/index-izh7Wkus.js` (479.03 kB)
+  - Build Time: 9.51s.
+
