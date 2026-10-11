@@ -179,4 +179,71 @@ img, picture, video, canvas, svg {
   justifyContent: space-between;
 }
 
+/* =========================================================================
+   Top Highlight Banner (Location & Direct Mobile Contact)
+========================================================================= */
+.top-highlight-banner {
+  font-family: var(--font-body);
+}
+
+.top-banner-pill-location {
+  transition: all var(--transition-fast);
+}
+
+.top-banner-pill-location:hover {
+  background-color: rgba(0, 163, 215, 0.28) !important;
+  border-color: rgba(0, 163, 215, 0.75) !important;
+  transform: translateY(-1px);
+}
+
+.top-banner-pill-phone {
+  transition: all var(--transition-fast);
+}
+
+.top-banner-pill-phone:hover {
+  background-color: rgba(245, 158, 11, 0.3) !important;
+  border-color: rgba(245, 158, 11, 0.85) !important;
+  transform: translateY(-1px);
+}
+
+.mobile-address {
+  display: none;
+}
+
+.desktop-address {
+  display: inline;
+}
+
+@media (max-width: 900px) {
+  .top-banner-hours {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-address {
+    display: none;
+  }
+  .mobile-address {
+    display: inline;
+  }
+  .top-banner-phone-secondary {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-highlight-banner {
+    padding: 0.35rem 0 !important;
+  }
+  .top-banner-pill-location {
+    font-size: 0.72rem !important;
+    padding: 0.2rem 0.45rem !important;
+  }
+  .top-banner-pill-phone {
+    font-size: 0.72rem !important;
+    padding: 0.2rem 0.45rem !important;
+  }
+}
+
 

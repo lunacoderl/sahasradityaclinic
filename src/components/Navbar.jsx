@@ -2,9 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {
   Menu, X, Calendar, Phone, ChevronDown, ArrowRight,
-  ShieldAlert, Flame, Brain, Hand, Crosshair, Sparkles
+  ShieldAlert, Flame, Brain, Hand, Crosshair, Sparkles,
+  MapPin, Clock, MessageCircle, ExternalLink
 } from 'lucide-react';
-import { CLINIC_INFO } from '../data/clinic';
+import { CLINIC_INFO, getWhatsAppUrl } from '../data/clinic';
 import { SERVICES_DATA, SERVICE_CATEGORIES } from '../data/services';
 import LucideIcon from './LucideIcon';
 
@@ -86,6 +87,184 @@ export default function Navbar() {
         transition: 'box-shadow var(--transition-normal), border-color var(--transition-normal)'
       }}
     >
+      {/* =========================================================================
+          TOP HIGHLIGHT BANNER: CLINIC LOCATION & DIRECT MOBILE CONTACT
+      ========================================================================= */}
+      <div
+        className="top-highlight-banner"
+        style={{
+          backgroundColor: '#071A30',
+          backgroundImage: 'linear-gradient(90deg, #071A30 0%, #0B2545 50%, #08213F 100%)',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+          color: '#FFFFFF',
+          fontSize: '0.8rem',
+          padding: '0.42rem 0',
+          position: 'relative',
+          zIndex: 1001
+        }}
+      >
+        <div className="container">
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexWrap: 'wrap',
+              gap: '0.45rem 1rem'
+            }}
+          >
+            {/* Highlighted Location Block */}
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.55rem',
+                flexWrap: 'wrap'
+              }}
+            >
+              <a
+                href={CLINIC_INFO.contact.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="View Sahasraditya Physiotherapy on Google Maps"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.45rem',
+                  backgroundColor: 'rgba(0, 163, 215, 0.16)',
+                  border: '1px solid rgba(0, 163, 215, 0.5)',
+                  color: '#E0F2FE',
+                  padding: '0.22rem 0.65rem',
+                  borderRadius: 'var(--radius-full)',
+                  fontWeight: 650,
+                  fontSize: '0.775rem',
+                  textDecoration: 'none'
+                }}
+                className="top-banner-pill-location"
+              >
+                <MapPin size={13} style={{ color: 'var(--logo-cyan)', flexShrink: 0 }} />
+                <span className="desktop-address">
+                  Ground Floor, Suvishesapuram, Opp. Central Jail Rd, Bhaskar Nagar, Rajamahendravaram
+                </span>
+                <span className="mobile-address">
+                  Suvishesapuram, Opp. Central Jail Rd, Rajahmundry
+                </span>
+                <span
+                  style={{
+                    backgroundColor: 'var(--logo-cyan)',
+                    color: '#0B2545',
+                    fontSize: '0.65rem',
+                    fontWeight: 800,
+                    padding: '0.1rem 0.4rem',
+                    borderRadius: 'var(--radius-full)',
+                    marginLeft: '0.2rem',
+                    letterSpacing: '0.04em'
+                  }}
+                >
+                  MAP
+                </span>
+              </a>
+
+              {/* Consultation Hours Subtle Tag */}
+              <div
+                className="top-banner-hours"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.35rem',
+                  color: 'rgba(255, 255, 255, 0.75)',
+                  fontSize: '0.725rem',
+                  fontWeight: 500
+                }}
+              >
+                <Clock size={12} style={{ color: 'var(--logo-gold)' }} />
+                <span>Mon–Sat: 9 AM – 8:30 PM</span>
+              </div>
+            </div>
+
+            {/* Highlighted Mobile Numbers & WhatsApp Block */}
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                flexWrap: 'wrap'
+              }}
+            >
+              {/* Primary Mobile Number (Highlighted with Gold Badge) */}
+              <a
+                href={`tel:${CLINIC_INFO.contact.primaryPhoneRaw}`}
+                title="Call Dr. Balaji directly"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.4rem',
+                  backgroundColor: 'rgba(245, 158, 11, 0.2)',
+                  border: '1.5px solid rgba(245, 158, 11, 0.65)',
+                  color: '#FEF3C7',
+                  padding: '0.22rem 0.7rem',
+                  borderRadius: 'var(--radius-full)',
+                  fontWeight: 800,
+                  fontSize: '0.775rem',
+                  textDecoration: 'none',
+                  boxShadow: '0 1px 6px rgba(245, 158, 11, 0.22)'
+                }}
+                className="top-banner-pill-phone"
+              >
+                <Phone size={13} style={{ color: '#FBBF24', flexShrink: 0 }} />
+                <span>{CLINIC_INFO.contact.primaryPhone}</span>
+              </a>
+
+              {/* Secondary Mobile Number */}
+              <a
+                href={`tel:${CLINIC_INFO.contact.secondaryPhoneRaw}`}
+                title="Call Clinic Reception"
+                className="top-banner-phone-secondary"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.35rem',
+                  color: 'rgba(255, 255, 255, 0.85)',
+                  fontSize: '0.75rem',
+                  fontWeight: 650,
+                  textDecoration: 'none',
+                  padding: '0.2rem 0.45rem',
+                  backgroundColor: 'rgba(255, 255, 255, 0.08)',
+                  borderRadius: 'var(--radius-full)',
+                  border: '1px solid rgba(255, 255, 255, 0.15)'
+                }}
+              >
+                <span>{CLINIC_INFO.contact.secondaryPhone}</span>
+              </a>
+
+              {/* Instant WhatsApp Quick Link */}
+              <a
+                href={getWhatsAppUrl("Hello Dr. Balaji, I would like to consult regarding physiotherapy treatment at Sahasraditya in Rajamahendravaram.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Chat with Clinic on WhatsApp"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.35rem',
+                  backgroundColor: '#25D366',
+                  color: '#FFFFFF',
+                  padding: '0.22rem 0.65rem',
+                  borderRadius: 'var(--radius-full)',
+                  fontWeight: 750,
+                  fontSize: '0.725rem',
+                  textDecoration: 'none',
+                  boxShadow: '0 2px 6px rgba(37, 211, 102, 0.25)'
+                }}
+              >
+                <MessageCircle size={12} />
+                <span>WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Sahasraditya Official Logo Spectrum Accent Line */}
       <div style={{ height: '3.5px', width: '100%', background: 'var(--gradient-spectrum)' }} />
 
