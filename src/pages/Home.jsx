@@ -36,12 +36,16 @@ export default function Home() {
     <>
       <SEO
         title="Sahasraditya Physiotherapy & In Patient Rehabilitation Centre"
-        description="Explore physiotherapy and rehabilitation services at Sahasraditya in Rajamahendravaram. Evidence-based musculoskeletal, sports, and neurological care led by Dr. D. V. Balaji N."
+        description="Sports and Neuro rehabilitation specialist in Rajamahendravaram. 8 years clinical hospital experience led by Dr. D. V. Balaji N (MS Sports Medicine, MBA Hospital Administration). Certified in PNF, NDT & advanced manual modalities."
         keywords={[
-          "Physiotherapy Rajamahendravaram",
-          "Rehabilitation Centre Rajamahendravaram",
+          "Sports and Neuro rehabilitation specialist",
+          "Physiotherapy hospital Rajahmundry",
           "Dr D V Balaji N",
+          "8 years experience physiotherapist",
+          "PNF NDT Rehabilitation Rajahmundry",
+          "MBA Hospital Administration Physiotherapist",
           "Orthopaedic Physiotherapy Rajahmundry",
+          "In Patient Rehabilitation Centre Rajamahendravaram",
           "Sports Injury Rehabilitation",
           "Neurological Rehabilitation",
           "Dry Needling Rajamahendravaram",
@@ -540,8 +544,8 @@ export default function Home() {
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <SectionHeading
             eyebrow="SURYA ADITYA CLINICAL LEADERSHIP"
-            title="Postgraduate Sports Medicine &amp; Clinical Excellence"
-            description="Meet Dr. D. V. Balaji N — combining specialized Master's degree sports medicine qualifications from JNTUK with hands-on hospital rehabilitation practice across coastal Andhra Pradesh."
+            title="Sports &amp; Neuro Rehabilitation Specialist"
+            description="Meet Dr. D. V. Balaji N — Sports and Neuro Rehabilitation Specialist with 8 years of clinical hospital experience in Rajahmundry, combining advanced Master's training from JNTUK, an MBA in Hospital Administration, and certified neuro-motor modalities."
           />
 
           {/* Masterpiece Doctor Card with Responsive Desktop Layout */}
@@ -564,7 +568,7 @@ export default function Home() {
               >
                 <img
                   src={CLINIC_INFO.doctor.image || "/images/doctor.jpg"}
-                  alt="Dr. D. V. Balaji N - Lead Physiotherapist at Sahasraditya Physiotherapy"
+                  alt="Dr. D. V. Balaji N - Sports and Neuro Rehabilitation Specialist at Sahasraditya Physiotherapy"
                   style={{
                     width: '100%',
                     aspectRatio: '1 / 1',
@@ -595,7 +599,7 @@ export default function Home() {
                 >
                   <Sun size={15} style={{ color: '#D97706' }} />
                   <span style={{ fontSize: '0.75rem', fontWeight: 750, color: '#B45309' }}>
-                    MS Sports Medicine (JNTUK)
+                    MS Sports Medicine &bull; MBA
                   </span>
                 </div>
 
@@ -621,7 +625,7 @@ export default function Home() {
                         Dr. D. V. Balaji N
                       </h4>
                       <p style={{ fontSize: '0.725rem', margin: '0.15rem 0 0', color: 'var(--logo-gold-glow)', fontWeight: 600 }}>
-                        Lead Physiotherapist &amp; Clinical Director
+                        Sports &amp; Neuro Rehabilitation Specialist
                       </p>
                     </div>
                     <span
@@ -660,10 +664,10 @@ export default function Home() {
                   }}
                 >
                   <div style={{ fontSize: '1.25rem', fontWeight: 850, color: 'var(--logo-cyan)', lineHeight: 1 }}>
-                    10+
+                    8 Years
                   </div>
                   <div style={{ fontSize: '0.7rem', color: 'var(--charcoal-text)', fontWeight: 650, marginTop: '0.25rem' }}>
-                    Years Clinical Care
+                    Hospital Experience
                   </div>
                 </div>
 
@@ -696,10 +700,10 @@ export default function Home() {
                   }}
                 >
                   <div style={{ fontSize: '1.25rem', fontWeight: 850, color: '#D97706', lineHeight: 1 }}>
-                    1-on-1
+                    MBA
                   </div>
                   <div style={{ fontSize: '0.7rem', color: 'var(--charcoal-text)', fontWeight: 650, marginTop: '0.25rem' }}>
-                    Evaluation Model
+                    Hospital Admin
                   </div>
                 </div>
               </div>
@@ -789,7 +793,7 @@ export default function Home() {
                     marginBottom: '0.45rem'
                   }}
                 >
-                  <Flame size={14} /> CHIEF REHABILITATION SPECIALIST
+                  <Flame size={14} /> SPORTS &amp; NEURO REHABILITATION SPECIALIST
                 </span>
 
                 <h3
@@ -835,14 +839,14 @@ export default function Home() {
                     <span>Medical &amp; Sports Degrees</span>
                   </h4>
 
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                     {/* JNTUK Sports Medicine Degree Card (Gold & Amber Theme) */}
                     <div
                       style={{
                         background: 'linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%)',
                         border: '1.5px solid rgba(245, 158, 11, 0.4)',
                         borderRadius: 'var(--radius-md)',
-                        padding: '0.75rem 1rem',
+                        padding: '0.65rem 0.95rem',
                         display: 'flex',
                         alignItems: 'flex-start',
                         gap: '0.65rem',
@@ -866,11 +870,50 @@ export default function Home() {
                         <Award size={16} />
                       </div>
                       <div>
-                        <strong style={{ fontSize: '0.875rem', color: '#92400E', display: 'block', lineHeight: 1.3 }}>
+                        <strong style={{ fontSize: '0.85rem', color: '#92400E', display: 'block', lineHeight: 1.3 }}>
                           MS Sports &amp; Health Sciences (Sports Medicine)
                         </strong>
-                        <span style={{ fontSize: '0.775rem', color: '#B45309' }}>
+                        <span style={{ fontSize: '0.75rem', color: '#B45309' }}>
                           JNTU Kakinada (JNTUK)
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* MBA Hospital Administration Card (Navy & Indigo Theme) */}
+                    <div
+                      style={{
+                        background: 'linear-gradient(135deg, #F8FAFC 0%, #EEF2F6 100%)',
+                        border: '1.5px solid rgba(11, 37, 69, 0.25)',
+                        borderRadius: 'var(--radius-md)',
+                        padding: '0.65rem 0.95rem',
+                        display: 'flex',
+                        alignItems: 'flex-start',
+                        gap: '0.65rem',
+                        boxShadow: 'var(--shadow-sm)'
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: '30px',
+                          height: '30px',
+                          borderRadius: 'var(--radius-sm)',
+                          backgroundColor: '#E2E8F0',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          color: 'var(--primary-navy)',
+                          flexShrink: 0,
+                          marginTop: '2px'
+                        }}
+                      >
+                        <Building2 size={16} />
+                      </div>
+                      <div>
+                        <strong style={{ fontSize: '0.85rem', color: 'var(--primary-navy)', display: 'block', lineHeight: 1.3 }}>
+                          MBA in Hospital Administration
+                        </strong>
+                        <span style={{ fontSize: '0.75rem', color: 'var(--muted-secondary-text)' }}>
+                          Hospital Management &amp; Clinical Operations
                         </span>
                       </div>
                     </div>
@@ -881,7 +924,7 @@ export default function Home() {
                         background: 'linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%)',
                         border: '1.5px solid rgba(0, 163, 215, 0.4)',
                         borderRadius: 'var(--radius-md)',
-                        padding: '0.75rem 1rem',
+                        padding: '0.65rem 0.95rem',
                         display: 'flex',
                         alignItems: 'flex-start',
                         gap: '0.65rem',
@@ -905,10 +948,10 @@ export default function Home() {
                         <GraduationCap size={16} />
                       </div>
                       <div>
-                        <strong style={{ fontSize: '0.875rem', color: '#075985', display: 'block', lineHeight: 1.3 }}>
+                        <strong style={{ fontSize: '0.85rem', color: '#075985', display: 'block', lineHeight: 1.3 }}>
                           Bachelor of Physical Therapy (BPT)
                         </strong>
-                        <span style={{ fontSize: '0.775rem', color: '#0284C7' }}>
+                        <span style={{ fontSize: '0.75rem', color: '#0284C7' }}>
                           VIMS, Dr. NTR University of Health Sciences
                         </span>
                       </div>
@@ -930,26 +973,44 @@ export default function Home() {
                     }}
                   >
                     <Building2 size={18} style={{ color: 'var(--logo-cyan)' }} />
-                    <span>Hospital Practice Background</span>
+                    <span>8 Years Hospital Practice</span>
                   </h4>
 
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                    {/* Featured Hospital Practice: Rajahmundry */}
                     <div
                       style={{
-                        fontSize: '0.8rem',
-                        backgroundColor: 'rgba(11, 37, 69, 0.06)',
-                        border: '1px solid rgba(11, 37, 69, 0.15)',
-                        padding: '0.55rem 0.85rem',
+                        fontSize: '0.825rem',
+                        backgroundColor: '#F0FDF4',
+                        border: '1.5px solid #22C55E',
+                        padding: '0.6rem 0.85rem',
                         borderRadius: 'var(--radius-md)',
-                        color: 'var(--logo-navy)',
-                        fontWeight: 650,
+                        color: '#15803D',
+                        fontWeight: 750,
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '0.45rem'
+                        justifyContent: 'space-between',
+                        gap: '0.45rem',
+                        boxShadow: '0 2px 6px rgba(34, 197, 94, 0.15)'
                       }}
                     >
-                      <span>🏥</span>
-                      <span>Life Hospital, Anakapalli</span>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
+                        <span>🏥</span>
+                        <span>KIMS (Bollineni Hospital), Rajahmundry</span>
+                      </div>
+                      <span
+                        style={{
+                          fontSize: '0.65rem',
+                          backgroundColor: '#22C55E',
+                          color: '#FFFFFF',
+                          padding: '0.15rem 0.45rem',
+                          borderRadius: 'var(--radius-full)',
+                          fontWeight: 700,
+                          whiteSpace: 'nowrap'
+                        }}
+                      >
+                        Rajahmundry
+                      </span>
                     </div>
 
                     <div
@@ -973,11 +1034,11 @@ export default function Home() {
                     <div
                       style={{
                         fontSize: '0.8rem',
-                        backgroundColor: 'var(--teal-light)',
-                        border: '1px solid rgba(19, 138, 138, 0.3)',
+                        backgroundColor: 'rgba(11, 37, 69, 0.06)',
+                        border: '1px solid rgba(11, 37, 69, 0.15)',
                         padding: '0.55rem 0.85rem',
                         borderRadius: 'var(--radius-md)',
-                        color: 'var(--teal-dark)',
+                        color: 'var(--logo-navy)',
                         fontWeight: 650,
                         display: 'flex',
                         alignItems: 'center',
@@ -985,19 +1046,36 @@ export default function Home() {
                       }}
                     >
                       <span>🏥</span>
-                      <span>KIMS (Bollineni Hospital), Rajahmundry</span>
+                      <span>Life Hospital, Anakapalli</span>
+                    </div>
+
+                    <div
+                      style={{
+                        fontSize: '0.725rem',
+                        color: 'var(--muted-secondary-text)',
+                        padding: '0.35rem 0.5rem',
+                        backgroundColor: '#F8FAFC',
+                        borderRadius: 'var(--radius-sm)',
+                        border: '1px dashed #CBD5E1',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.35rem'
+                      }}
+                    >
+                      <ShieldCheck size={13} style={{ color: '#16A34A', flexShrink: 0 }} />
+                      <span>8 Years of Supervised Clinical Hospital &amp; Neuro Care</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Certified Techniques Color-Coded by Domain */}
+              {/* Certified Techniques Color-Coded by Domain with Prominently Highlighted PNF & NDT */}
               <div style={{ marginBottom: '1.5rem' }}>
                 <h4
                   style={{
                     fontSize: '0.9rem',
                     color: 'var(--primary-navy)',
-                    marginBottom: '0.55rem',
+                    marginBottom: '0.6rem',
                     display: 'flex',
                     alignItems: 'center',
                     gap: '0.45rem',
@@ -1007,6 +1085,74 @@ export default function Home() {
                   <Award size={18} style={{ color: 'var(--logo-orange)' }} />
                   <span>Certified Manual &amp; Specialized Modalities</span>
                 </h4>
+
+                {/* Highlighted Core Specialties: PNF & NDT Banner */}
+                <div
+                  style={{
+                    marginBottom: '0.75rem',
+                    padding: '0.65rem 0.85rem',
+                    background: 'linear-gradient(135deg, rgba(255, 251, 235, 0.95) 0%, rgba(254, 243, 199, 0.85) 100%)',
+                    borderRadius: 'var(--radius-md)',
+                    border: '1.5px solid rgba(245, 158, 11, 0.5)',
+                    boxShadow: '0 2px 8px rgba(245, 158, 11, 0.12)'
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: '0.725rem',
+                      fontWeight: 800,
+                      color: '#B45309',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.06em',
+                      marginBottom: '0.45rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.35rem'
+                    }}
+                  >
+                    <Sparkles size={13} style={{ color: '#D97706' }} />
+                    <span>Specialized Core Specialties (Highlighted):</span>
+                  </div>
+
+                  <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                    <span
+                      style={{
+                        fontSize: '0.825rem',
+                        padding: '0.35rem 0.85rem',
+                        borderRadius: 'var(--radius-full)',
+                        background: '#FFFFFF',
+                        color: '#92400E',
+                        border: '2px solid #F59E0B',
+                        fontWeight: 800,
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.35rem',
+                        boxShadow: '0 2px 6px rgba(245, 158, 11, 0.2)'
+                      }}
+                    >
+                      ⭐ PNF (Proprioceptive Neuromuscular Facilitation)
+                    </span>
+                    <span
+                      style={{
+                        fontSize: '0.825rem',
+                        padding: '0.35rem 0.85rem',
+                        borderRadius: 'var(--radius-full)',
+                        background: '#FFFFFF',
+                        color: '#1E40AF',
+                        border: '2px solid #3B82F6',
+                        fontWeight: 800,
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.35rem',
+                        boxShadow: '0 2px 6px rgba(59, 130, 246, 0.2)'
+                      }}
+                    >
+                      ⭐ NDT (Neurodevelopmental Therapy / Bobath Approach)
+                    </span>
+                  </div>
+                </div>
+
+                {/* Additional Certified Modalities */}
                 <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
                   {/* Sports & Kinetic - Orange */}
                   <span className="badge-aditya" style={{ fontSize: '0.75rem', padding: '0.25rem 0.6rem', borderRadius: 'var(--radius-full)' }}>
@@ -1036,14 +1182,6 @@ export default function Home() {
                   </span>
                   <span style={{ fontSize: '0.75rem', padding: '0.25rem 0.6rem', borderRadius: 'var(--radius-full)', backgroundColor: 'var(--teal-light)', color: 'var(--teal-dark)', border: '1px solid rgba(19, 138, 138, 0.25)', fontWeight: 650 }}>
                     ✨ Positional Release (PRT)
-                  </span>
-
-                  {/* Neuro Retraining - Navy */}
-                  <span className="badge-navy" style={{ fontSize: '0.75rem', padding: '0.25rem 0.6rem', borderRadius: 'var(--radius-full)' }}>
-                    🧠 PNF Neuromuscular Facilitation
-                  </span>
-                  <span className="badge-navy" style={{ fontSize: '0.75rem', padding: '0.25rem 0.6rem', borderRadius: 'var(--radius-full)' }}>
-                    🚶 NDT / Bobath Motor Retraining
                   </span>
                 </div>
               </div>

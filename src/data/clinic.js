@@ -5,32 +5,36 @@ export const CLINIC_INFO = {
   name: "Sahasraditya Physiotherapy & In Patient Rehabilitation Centre",
   shortName: "Sahasraditya Physiotherapy",
   tagline: "Restore Movement. Restore Life.",
-  
+
   // Lead Practitioner
   doctor: {
     name: "Dr. D. V. Balaji N",
-    title: "Lead Physiotherapist & Rehabilitation Specialist",
+    title: "Sports and Neuro Rehabilitation Specialist",
     image: "/images/doctor.jpg",
+    experienceYears: "8+",
     education: [
-      "Master's Degree: MS Sports & Health Sciences (Sports Medicine), Jawaharlal Nehru Technological University, Kakinada",
-      "Bachelor's Degree: Bachelor of Physical Therapy (BPT), VIMS College of Physiotherapy, Dr. NTR Health University, Vijayawada"
+      "Master's Degree: MS Sports & Health Sciences (Sports Medicine), Jawaharlal Nehru Technological University, Kakinada (JNTUK)",
+      "Postgraduate Degree: MBA in Hospital Administration",
+      "Bachelor's Degree: Bachelor of Physical Therapy (BPT), VIMS College of Physiotherapy, Dr. NTR University of Health Sciences, Vijayawada"
     ],
     verifiedExperience: [
-      "Life Hospital, Anakapalli",
+      "KIMS (Bollineni Hospital), Rajahmundry",
       "Sarojini Physiotherapy Clinic, Kakinada",
-      "KIMS (Bollineni), Rajahmundry"
+      "Life Hospital, Anakapalli"
     ],
+    hospitalExperience: "8 Years of Comprehensive In-Patient & OPD Hospital Practice in Rajahmundry & Coastal AP",
     certificationsAndTraining: [
+      "Proprioceptive Neuromuscular Facilitation (PNF)",
+      "Neurodevelopmental Therapy (NDT / Bobath Concept)",
       "Neuro Myoskeletal Dry Needling",
       "Myofascial Release (MFR)",
       "Muscle Energy Technique (MET)",
       "Positional Release Technique (PRT)",
-      "Therapeutic Taping",
+      "Therapeutic & Kinesiology Taping",
       "Cupping Therapy",
-      "Proprioceptive Neuromuscular Facilitation (PNF)",
-      "Joint Mobilization & Biomechanical Assessment"
+      "Joint Mobilization (Maitland / Mulligan) & Biomechanical Assessment"
     ],
-    bio: "Dr. D. V. Balaji N is a dedicated physiotherapist with postgraduate training in Sports & Health Sciences from JNTU Kakinada and extensive clinical background at premier healthcare institutions across coastal Andhra Pradesh. His clinical practice emphasizes thorough biomechanical assessment, evidence-based manual therapy, and progressive active rehabilitation designed to restore patient mobility and independence."
+    bio: "Dr. D. V. Balaji N is an accomplished Sports and Neuro Rehabilitation Specialist with 8 years of clinical hospital experience, including prominent hospital practice at KIMS (Bollineni Hospital) in Rajahmundry. Holding an MS in Sports & Health Sciences from JNTU Kakinada, an MBA in Hospital Administration, and a BPT from Dr. NTR University of Health Sciences, Dr. Balaji specializes in evidence-based PNF (Proprioceptive Neuromuscular Facilitation) and NDT (Neurodevelopmental Therapy) alongside advanced manual modalities to restore functional movement and long-term independence."
   },
 
   // Contact Information

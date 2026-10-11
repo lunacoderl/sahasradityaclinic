@@ -307,4 +307,63 @@
     ```
   - Result: SUCCESS (0 errors). All 62 production source files, media assets, design tokens, responsive styles, components, and SEO files successfully published to `https://github.com/lunacoderl/sahasradityaclinic.git` on branch `main`.
 
+---
+
+### Record Log: Phase 9 - Doctor Clinical Profile Update: Sports & Neuro Rehabilitation Specialist, Rajahmundry Hospital Experience, MBA & Highlighted PNF/NDT
+
+#### 1. Scope of Clinical Additions
+- **User Requirements:**
+  - Update title to: **Sports and Neuro rehabilitation specialist**.
+  - Emphasize clinical hospital practice in: **hospital Rajahmundry** (specifically featuring KIMS Bollineni Hospital, Rajahmundry).
+  - Update clinical experience to: **8 years experience**.
+  - Add postgraduate qualification: **MBA in Hospital Administration**.
+  - Prominently highlight modalities: **PNF** (Proprioceptive Neuromuscular Facilitation) & **NDT** (Neurodevelopmental Therapy / Bobath Approach) in the certified manual and specialized modalities section.
+
+#### 2. Files Modified & Exact Implementation Details
+- **`src/data/clinic.js`:**
+  - Updated `CLINIC_INFO.doctor.title` from `"Physiotherapist & Rehabilitation Specialist"` to `"Sports and Neuro Rehabilitation Specialist"`.
+  - Added `CLINIC_INFO.doctor.experienceYears`: `"8+"`.
+  - Updated `CLINIC_INFO.doctor.education`:
+    1. `Master's Degree: MS Sports & Health Sciences (Sports Medicine), Jawaharlal Nehru Technological University, Kakinada (JNTUK)`
+    2. `Postgraduate Degree: MBA in Hospital Administration`
+    3. `Bachelor's Degree: Bachelor of Physical Therapy (BPT), VIMS College of Physiotherapy, Dr. NTR University of Health Sciences, Vijayawada`
+  - Updated `CLINIC_INFO.doctor.verifiedExperience`: Promoted `KIMS (Bollineni Hospital), Rajahmundry` to the top position, alongside `Sarojini Physiotherapy Clinic, Kakinada` and `Life Hospital, Anakapalli`.
+  - Added `CLINIC_INFO.doctor.hospitalExperience`: `"8 Years of Comprehensive In-Patient & OPD Hospital Practice in Rajahmundry & Coastal AP"`.
+  - Updated `CLINIC_INFO.doctor.certificationsAndTraining`: Elevated `Proprioceptive Neuromuscular Facilitation (PNF)` and `Neurodevelopmental Therapy (NDT / Bobath Concept)` to the first positions.
+  - Updated `CLINIC_INFO.doctor.bio`: Reflects 8 years of clinical hospital experience, prominent hospital practice in Rajahmundry (KIMS Bollineni), postgraduate sports medicine (JNTUK), MBA in Hospital Administration, BPT (Dr. NTR University), and core specialization in PNF & NDT.
+
+- **`src/pages/Home.jsx`:**
+  - **SEO Metadata:** Enriched SEO title, description, and keywords with `Sports and Neuro rehabilitation specialist`, `Physiotherapy hospital Rajahmundry`, `8 years experience physiotherapist`, `PNF NDT Rehabilitation Rajahmundry`, and `MBA Hospital Administration Physiotherapist`.
+  - **Doctor Section Heading:** Updated eyebrow and title to `"Sports & Neuro Rehabilitation Specialist"` and description highlighting 8 years hospital experience in Rajahmundry.
+  - **Doctor Image Frame:** Updated alt tag and top-right qualification badge to `"MS Sports Medicine • MBA"`.
+  - **Doctor Identity Overlay:** Updated subtitle to `"Sports & Neuro Rehabilitation Specialist"`.
+  - **3-Part Metric Counters:**
+    * Metric 1: `8 Years` — `Hospital Experience`.
+    * Metric 2: `JNTUK` — `Sports Medicine MS`.
+    * Metric 3: `MBA` — `Hospital Admin`.
+  - **Doctor Eyebrow Badge:** Updated to `<Flame size={14} /> SPORTS & NEURO REHABILITATION SPECIALIST`.
+  - **Medical & Sports Degrees Sub-Grid:**
+    * Retained JNTUK MS Sports Medicine card (`#FFFBEB` gold theme).
+    * Added **MBA in Hospital Administration** card (`#F8FAFC` slate/navy theme with `<Building2 />` icon and `"Hospital Management & Clinical Operations"` tag).
+    * Retained Dr. NTR University BPT card (`#F0F9FF` cerulean blue theme).
+  - **Hospital Practice Background Sub-Grid:**
+    * Updated sub-heading to `<Building2 size={18} /> 8 Years Hospital Practice`.
+    * Elevated **KIMS (Bollineni Hospital), Rajahmundry** with emerald highlighted styling, border, and `"Rajahmundry"` tag.
+    * Displayed Sarojini Clinic (Kakinada) and Life Hospital (Anakapalli).
+    * Added verified note: `"8 Years of Supervised Clinical Hospital & Neuro Care"`.
+  - **Certified Manual & Specialized Modalities:**
+    * Designed a dedicated, eye-catching highlighted core specialty banner with gold border and glowing background:
+      - `⭐ PNF (Proprioceptive Neuromuscular Facilitation)`
+      - `⭐ NDT (Neurodevelopmental Therapy / Bobath Approach)`
+    * Followed by all 8 remaining certified modalities (Dry Needling, Taping, Cupping, Joint Mobilisation, Biomechanics, MFR, MET, PRT).
+
+#### 3. Verification & Build Testing
+- **Production Build:** `npm run build`
+- **Result:** SUCCESS (exit code 0, 0 errors, 0 warnings).
+- **Bundle Output:**
+  - `dist/index.html` (4.50 kB)
+  - `dist/assets/index-BQUsuhzx.css` (10.87 kB)
+  - `dist/assets/index-Jf8BZ8p_.js` (475.13 kB)
+
+
 
