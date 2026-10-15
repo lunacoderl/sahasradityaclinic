@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { siteSeo } from '../siteSeo';
 
 /**
  * Route-aware SEO component for title, meta tags, and structured data injection.
@@ -8,9 +9,10 @@ export default function SEO({
   description,
   keywords,
   canonicalUrl,
-  ogImage = "https://sahasradityaphysio.in/images/sahasraditya-logo.png",
+  ogImage = `${siteSeo.baseUrl}/images/sahasraditya-logo.png`,
   ogType = "website",
-  schemaJson = null
+  schemaJson = null,
+  noIndex = false,
 }) {
   useEffect(() => {
     // 1. Update Document Title
@@ -32,6 +34,7 @@ export default function SEO({
 
     // 2. Set Standard Meta Tags
     setMetaTag('meta[name="description"]', 'name', 'description', description);
+    setMetaTag('meta[name="robots"]', 'name', 'robots', noIndex ? 'noindex, nofollow' : 'index, follow');
     if (keywords) {
       const kwString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
       setMetaTag('meta[name="keywords"]', 'name', 'keywords', kwString);
@@ -42,8 +45,13 @@ export default function SEO({
     setMetaTag('meta[property="og:description"]', 'property', 'og:description', description);
     setMetaTag('meta[property="og:type"]', 'property', 'og:type', ogType);
     setMetaTag('meta[property="og:image"]', 'property', 'og:image', ogImage);
-    if (canonicalUrl) {
-      setMetaTag('meta[property="og:url"]', 'property', 'og:url', canonicalUrl);
+
+    const resolvedCanonical = canonicalUrl 
+      ? (canonicalUrl.startsWith('http') ? canonicalUrl.replace('https://sahasradityaphysio.in', siteSeo.baseUrl) : `${siteSeo.baseUrl}${canonicalUrl.startsWith('/') ? '' : '/'}${canonicalUrl}`)
+      : null;
+
+    if (resolvedCanonical) {
+      setMetaTag('meta[property="og:url"]', 'property', 'og:url', resolvedCanonical);
       
       // Update Canonical Link
       let canonicalEl = document.querySelector('link[rel="canonical"]');
@@ -52,7 +60,7 @@ export default function SEO({
         canonicalEl.setAttribute('rel', 'canonical');
         document.head.appendChild(canonicalEl);
       }
-      canonicalEl.setAttribute('href', canonicalUrl);
+      canonicalEl.setAttribute('href', resolvedCanonical);
     }
 
     // 4. Set Twitter Tags

@@ -10,6 +10,7 @@ export default function NotFound() {
       <SEO
         title="Page Not Found"
         description="The page you are looking for at Sahasraditya Physiotherapy Centre could not be found."
+        noIndex={true}
       />
 
       <section
